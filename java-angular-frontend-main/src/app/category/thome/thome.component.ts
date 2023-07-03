@@ -4,10 +4,10 @@ import { Category } from '../category';
 
 @Component({
   selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css'],
+  templateUrl: './thome.component.html',
+  styleUrls: ['./thome.component.css'],
 })
-export class IndexComponent implements OnInit {
+export class HomeComponent implements OnInit {
   categories: Category[] = [];
   /*------------------------------------------
     --------------------------------------------
@@ -25,18 +25,6 @@ export class IndexComponent implements OnInit {
     this.categoryService.getAll().subscribe((data: Category[]) => {
       this.categories = data;
       console.log(this.categories);
-    });
-  }
-
-  /**
-   * Write code on Method
-   *
-   * @return response()
-   */
-  deleteCategory(id: number) {
-    this.categoryService.delete(id).subscribe((res) => {
-      this.categories = this.categories.filter((item) => item.id !== id);
-      console.log('Category deleted successfully!');
     });
   }
 }

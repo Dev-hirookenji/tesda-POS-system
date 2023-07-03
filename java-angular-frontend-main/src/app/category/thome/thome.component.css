@@ -1,0 +1,32 @@
+.left {
+  left: 17%;
+  top: 37%;
+  position: absolute;
+  width: 50%;
+  float: left;
+  height: 50vh;
+}
+.right {
+  padding-top: 45px;
+  padding-left: 100px;
+  width: 50%;
+  float: right;
+  height: 100vh;
+}
+.homepage {
+  right: 30%;
+  top: 50%;
+  padding-left: -5px;
+  width: 75%;
+}
+h1 {
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 55px;
+}
+.btn-primary {
+  position: absolute;
+  margin-top: 31%;
+  margin-left: 69%;
+}

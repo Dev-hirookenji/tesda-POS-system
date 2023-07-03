@@ -1,21 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-   
+
 import { CategoryRoutingModule } from './category-routing.module';
 import { IndexComponent } from './index/index.component';
 import { ViewComponent } from './view/view.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
-   
+import { HomeComponent } from './thome/thome.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-   
+
 @NgModule({
-  declarations: [IndexComponent, ViewComponent, CreateComponent, EditComponent],
+  declarations: [
+    IndexComponent,
+    ViewComponent,
+    CreateComponent,
+    EditComponent,
+    HomeComponent,
+  ],
   imports: [
     CommonModule,
     CategoryRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
-export class CategoryModule { }
+export class CategoryModule {}
