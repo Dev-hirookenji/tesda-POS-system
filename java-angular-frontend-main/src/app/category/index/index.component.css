@@ -5,6 +5,11 @@
 .navtext {
   color: rgb(238, 239, 239);
 }
+.navtitle {
+  margin-top: 15px;
+  color: white;
+  font-size: 15px;
+}
 
 table {
   margin-top: 13px;
