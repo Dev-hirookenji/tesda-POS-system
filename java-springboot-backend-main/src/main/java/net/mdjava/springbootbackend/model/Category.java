@@ -10,6 +10,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 import javax.persistence.*;
 
 @Getter
@@ -34,4 +36,7 @@ public class Category {
     
     @Column(name = "description")
     private String description;
+
+    @Column(name = "price")
+    private BigDecimal price;
 }

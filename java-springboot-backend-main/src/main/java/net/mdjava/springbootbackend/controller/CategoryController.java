@@ -59,6 +59,7 @@ public class CategoryController {
         
         updateCategory.setName(categoryDetails.getName());
         updateCategory.setDescription(categoryDetails.getDescription());
+        updateCategory.setPrice(categoryDetails.getPrice());
         
         categoryRepository.save(updateCategory);
         
