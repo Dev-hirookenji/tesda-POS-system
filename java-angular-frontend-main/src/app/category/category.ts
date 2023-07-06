@@ -1,6 +1,7 @@
 export interface Category {
   id: number;
-  name: string;
-  description: string;
-  price: number;
+  product: string;
+  classification: string;
+  quantity: number;
+  payment: string;
 }

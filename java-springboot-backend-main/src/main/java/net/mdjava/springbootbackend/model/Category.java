@@ -31,12 +31,15 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     
-    @Column(name = "name")
-    private String name;
+    @Column(name = "Product")
+    private String Product;
     
-    @Column(name = "description")
-    private String description;
+    @Column(name = "Classification")
+    private String Classification;
 
-    @Column(name = "price")
-    private BigDecimal price;
+    @Column(name = "Quantity")
+    private Double Quantity;
+
+    @Column(name = "Payment")
+    private String Payment;
 }

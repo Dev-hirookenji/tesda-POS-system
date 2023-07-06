@@ -72,59 +72,79 @@
 
   <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="form-group">
-      <label for="name">Name:</label>
+      <label for="product">Product:</label>
       <input
-        formControlName="name"
-        id="name"
+        formControlName="product"
+        id="product"
         type="text"
         class="form-control"
       />
       <div
-        *ngIf="f['name'].touched && f['name'].invalid"
+        *ngIf="f['product'].touched && f['product'].invalid"
         class="alert alert-danger"
       >
-        <div *ngIf="f['name'].errors && f['name'].errors['required']">
-          Name is required.
+        <div *ngIf="f['product'].errors && f['product'].errors['required']">
+          Product is required.
         </div>
       </div>
     </div>
 
     <div class="form-group">
-      <label for="description">Description</label>
+      <label for="classification">Classification</label>
       <textarea
-        formControlName="description"
-        id="description"
+        formControlName="classification"
+        id="classification"
         type="text"
         class="form-control"
       >
       </textarea>
       <div
-        *ngIf="f['description'].touched && f['description'].invalid"
+        *ngIf="f['classification'].touched && f['classification'].invalid"
         class="alert alert-danger"
       >
         <div
-          *ngIf="f['description'].errors && f['description'].errors['required']"
+          *ngIf="
+            f['classification'].errors && f['classification'].errors['required']
+          "
         >
-          Description is required.
+          Classification is required.
         </div>
       </div>
     </div>
 
     <div class="form-group">
-      <label for="price">Price</label>
+      <label for="quantity">Quantity</label>
       <textarea
-        formControlName="price"
-        id="price"
+        formControlName="quantity"
+        id="quantity"
         type="text"
         class="form-control"
       >
       </textarea>
       <div
-        *ngIf="f['price'].touched && f['price'].invalid"
+        *ngIf="f['quantity'].touched && f['quantity'].invalid"
         class="alert alert-danger"
       >
-        <div *ngIf="f['price'].errors && f['price'].errors['required']">
-          Price is required.
+        <div *ngIf="f['quantity'].errors && f['quantity'].errors['required']">
+          Quantity is required.
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="payment">Payment Option</label>
+      <textarea
+        formControlName="payment"
+        id="payment"
+        type="text"
+        class="form-control"
+      >
+      </textarea>
+      <div
+        *ngIf="f['payment'].touched && f['payment'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['payment'].errors && f['payment'].errors['required']">
+          Payment Option is required.
         </div>
       </div>
     </div>

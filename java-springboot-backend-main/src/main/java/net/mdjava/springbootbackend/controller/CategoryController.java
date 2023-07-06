@@ -57,9 +57,10 @@ public class CategoryController {
     public ResponseEntity<Category> updateCategory(@PathVariable long id, @RequestBody Category categoryDetails) {
         Category updateCategory = categoryRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Category does not exist with id: " + id));
         
-        updateCategory.setName(categoryDetails.getName());
-        updateCategory.setDescription(categoryDetails.getDescription());
-        updateCategory.setPrice(categoryDetails.getPrice());
+        updateCategory.setProduct(categoryDetails.getProduct());
+        updateCategory.setClassification(categoryDetails.getClassification());
+        updateCategory.setQuantity(categoryDetails.getQuantity());
+        updateCategory.setPayment(categoryDetails.getPayment());
         
         categoryRepository.save(updateCategory);
         
