@@ -1,161 +1,161 @@
-<div class="navbar-nav-lg">
-  <nav
-    class="navbar navbar-expand-lg fixed-top navbar-scroll px-5"
-    style="background-color: #308ee3"
-  >
-    <div
-      class="container-fluid"
-      style="width: 100%; height: 100%; justify-content: center"
+<body>
+  <div class="navbar-nav-lg">
+    <nav
+      class="navbar navbar-expand-lg fixed-top navbar-scroll px-5"
+      style="background-color: #308ee3"
     >
-      <img
-        style="width: 50px; height: 50px"
-        src="./assets/iconn.png"
-        alt=""
-        loading="lazy"
-      />
-      <p class="navtitle">SmartMart</p>
-      <button
-        class="navbar-toggler ps-0"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarExample01"
-        aria-controls="navbarExample01"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+      <div
+        class="container-fluid"
+        style="width: 100%; height: 100%; justify-content: center"
       >
-        <span
-          class="navbar-toggler-icon d-flex justify-content-start align-items-center"
+        <img
+          style="width: 50px; height: 50px"
+          src="./assets/iconn.png"
+          alt=""
+          loading="lazy"
+        />
+        <p class="navtitle">SmartMart</p>
+        <button
+          class="navbar-toggler ps-0"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <i class="fas fa-bars"></i>
-        </span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarExample01">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <a
-              class="nav-link navtext"
-              aria-current="page"
-              href="#"
-              routerLink="/category/thome/"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link navtext"
-              aria-current="page"
-              href="/category/create/"
-              >Add new</a
-            >
-          </li>
+          <span
+            class="navbar-toggler-icon d-flex justify-content-start align-items-center"
+          >
+            <i class="fas fa-bars"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a
+                class="nav-link navtext"
+                aria-current="page"
+                href="#"
+                routerLink="/category/thome/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link navtext"
+                aria-current="page"
+                href="/category/create/"
+                >Add new</a
+              >
+            </li>
 
-          <li class="nav-item">
-            <a class="nav-link navtext" aria-current="page" href="#about"
-              >About us</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-<div class="container" style="padding-top: 100px">
-  <h1>Create New Category</h1>
-
-  <a
-    href="#"
-    routerLink="/category/index"
-    class="btn btn-primary"
-    style="margin-bottom: 9px"
-    >Back</a
-  >
-
-  <form [formGroup]="form" (ngSubmit)="submit()">
-    <div class="form-group">
-      <label for="product">Product:</label>
-      <input
-        formControlName="product"
-        id="product"
-        type="text"
-        class="form-control"
-      />
-      <div
-        *ngIf="f['product'].touched && f['product'].invalid"
-        class="alert alert-danger"
-      >
-        <div *ngIf="f['product'].errors && f['product'].errors['required']">
-          Product is required.
+            <li class="nav-item">
+              <a class="nav-link navtext" aria-current="page" href="#about"
+                >About us</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
+  </div>
+  <div class="container" style="padding-top: 100px">
+    <h1>Create New Category</h1>
 
-    <div class="form-group">
-      <label for="classification">Classification</label>
-      <textarea
-        formControlName="classification"
-        id="classification"
-        type="text"
-        class="form-control"
-      >
-      </textarea>
-      <div
-        *ngIf="f['classification'].touched && f['classification'].invalid"
-        class="alert alert-danger"
-      >
-        <div
-          *ngIf="
-            f['classification'].errors && f['classification'].errors['required']
-          "
-        >
-          Classification is required.
-        </div>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="quantity">Quantity</label>
-      <textarea
-        formControlName="quantity"
-        id="quantity"
-        type="text"
-        class="form-control"
-      >
-      </textarea>
-      <div
-        *ngIf="f['quantity'].touched && f['quantity'].invalid"
-        class="alert alert-danger"
-      >
-        <div *ngIf="f['quantity'].errors && f['quantity'].errors['required']">
-          Quantity is required.
-        </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="payment">Payment Option</label>
-      <textarea
-        formControlName="payment"
-        id="payment"
-        type="text"
-        class="form-control"
-      >
-      </textarea>
-      <div
-        *ngIf="f['payment'].touched && f['payment'].invalid"
-        class="alert alert-danger"
-      >
-        <div *ngIf="f['payment'].errors && f['payment'].errors['required']">
-          Payment Option is required.
-        </div>
-      </div>
-    </div>
-
-    <button
+    <a
+      href="#"
+      routerLink="/category/index"
       class="btn btn-primary"
-      type="submit"
-      style="margin-top: 12px"
-      [disabled]="!form.valid"
+      style="margin-bottom: 9px"
+      >Back</a
     >
-      Submit
-    </button>
-  </form>
-</div>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-group">
+        <label for="product">Product:</label>
+        <input
+          formControlName="product"
+          id="product"
+          type="text"
+          class="form-control"
+        />
+        <div
+          *ngIf="f['product'].touched && f['product'].invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="f['product'].errors && f['product'].errors['required']">
+            Product is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="classification">Classification</label>
+        <input
+          formControlName="classification"
+          id="classification"
+          type="text"
+          class="form-control"
+        />
+        <div
+          *ngIf="f['classification'].touched && f['classification'].invalid"
+          class="alert alert-danger"
+        >
+          <div
+            *ngIf="
+              f['classification'].errors &&
+              f['classification'].errors['required']
+            "
+          >
+            Classification is required.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input
+          formControlName="quantity"
+          id="quantity"
+          type="text"
+          class="form-control"
+        />
+        <div
+          *ngIf="f['quantity'].touched && f['quantity'].invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="f['quantity'].errors && f['quantity'].errors['required']">
+            Quantity is required.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="payment">Payment Option</label>
+        <input
+          formControlName="payment"
+          id="payment"
+          type="text"
+          class="form-control"
+        />
+        <div
+          *ngIf="f['payment'].touched && f['payment'].invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="f['payment'].errors && f['payment'].errors['required']">
+            Payment Option is required.
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="btn btn-primary"
+        type="submit"
+        style="margin-top: 12px"
+        [disabled]="!form.valid"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</body>

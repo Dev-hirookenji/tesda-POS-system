@@ -19,18 +19,25 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
         Category category = new Category();
         category.setProduct("Food");
         category.setClassification("Price of food");
         category.setQuantity(4654.34);
         category.setPayment("Gcash");
 
+        
+
         categoryRepository.save(category);
         
-      //  Category category1 = new Category();
-      //  category1.setProduct("Beverage");
-      //  category1.setDescription("Price of beverage");
-      //  categoryRepository.save(category1);
+        Category category1 = new Category();
+        category1.setProduct("Foozzsdzd");
+        category1.setClassification("asda");
+        category1.setQuantity(4654.34);
+        category1.setPayment("Gcash");
+        categoryRepository.save(category1);
+        
+      
 
       //   Category category3 = new Category();
       //  category3.setProduct("Beverage");
